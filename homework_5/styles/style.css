@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+
+:root {
+  --primary-blue: #115e98;
+  --text-white: #ffffff;
+  --text-peach: #ffd3d5;
+  --text-black: rgba(0, 0, 0, 0.87);
+  --light-blue: rgba(17, 94, 152, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+a,
+a:hover,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  place-content: center;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1440px;
+  display: grid;
+  grid:
+    "content nav" 100% /
+    auto 25em;
+}
+
+.content {
+  grid-area: content;
+  padding: 4.5em 0 4.5em 4.5em;
+  display: grid;
+  grid:
+    "banner" 1fr
+    "products" auto/
+    100%;
+}
+
+.banner {
+  grid-area: banner;
+  margin-bottom: 2em;
+  position: relative;
+  border-radius: 1em;
+  padding: 16px;
+  box-shadow: 0px 0px 30px rgba(17, 94, 152, 0.03),
+    0px 0px 20px rgba(17, 94, 152, 0.06), 0px 0px 10px rgba(17, 94, 152, 0.12);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+
+.banner .banner-white-text {
+  color: var(--text-white);
+  font-weight: 500;
+  font-size: 40px;
+  position: absolute;
+}
+
+#banner-1 {
+  left: 54%;
+  top: 36%;
+}
+
+#banner-3 {
+  left: 72%;
+  top: 82%;
+}
+
+#banner-3 span {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-peach);
+  margin-left: 6px;
+  vertical-align: text-top;
+}
+
+.banner .disclaimer {
+  font-size: 12px;
+  position: absolute;
+  color: var(--text-peach);
+  bottom: 2em;
+  left: 2em;
+}
+
+.banner .banner-2 {
+  color: var(--text-peach);
+  font-weight: 400;
+  font-size: 144px;
+  position: absolute;
+  left: 56.5%;
+  top: 53.25%;
+}
+
+.banner .banner-2 span {
+  font-size: 48px;
+}
+
+.banner #banner-2-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--primary-blue);
+  font-weight: 400;
+  font-size: 144px;
+  position: absolute;
+  transform: translate(8px, 8px);
+}
+
+.products {
+  background-color: white;
+  grid-area: products;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto auto 222px;
+  width: 100%;
+  position: relative;
+}
+
+.products .product-card {
+  display: grid;
+  grid:
+    "image" 200px
+    "label" 4.5em/
+    100%;
+  border-radius: 1em;
+  padding: 16px 16px 0 16px;
+  margin-right: 32px;
+  transition: transform 0.4s;
+  box-shadow: 0px 0px 30px rgba(17, 94, 152, 0.03),
+    0px 0px 20px rgba(17, 94, 152, 0.06), 0px 0px 10px rgba(17, 94, 152, 0.12);
+}
+
+.products .product-card:hover {
+  transform: translate(0, -8px);
+}
+
+.products .see-all {
+  width: 222px;
+  margin-right: 0;
+}
+
+.products .product-card .label {
+  grid-area: label;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+}
+
+.products .product-card .label h1 {
+  font-weight: 500;
+  color: var(--text-black);
+  font-size: 20px;
+  place-self: center start;
+}
+
+.products .product-card .label p {
+  font-size: 0.875em;
+  place-self: center end;
+}
+
+.products .see-all .label h1 {
+  place-self: center end;
+  color: var(--primary-blue);
+}
+.products .see-all .label img {
+  place-self: center end;
+  width: 24px;
+  margin-left: 12px;
+}
+
+.products .product-card .product-image {
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  max-height: 240px;
+  border-radius: 8px;
+}
+
+.products .product-card .product-image:nth-child(2) {
+  object-position: top;
+}
+
+nav {
+  grid-area: nav;
+  display: grid;
+  grid:
+    "header" 12.5em
+    "cart" 1fr
+    "about" 10em/
+    100%;
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+}
+
+.header {
+  grid-area: "header";
+  display: grid;
+  place-content: start center;
+  text-align: center;
+}
+
+.header #sub-title {
+  margin-top: 1.5em;
+  font-family: Inter;
+  font-size: 1em;
+  color: var(--primary-blue);
+}
+
+.header #logo {
+  transition: transform 0.4s;
+}
+.header #logo:hover {
+  transform: scale(1.05);
+}
+
+.cart {
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.cart img {
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
+}
+
+.cart #cart-status {
+  font-weight: 500;
+  font-size: 1.5em;
+  color: var(--light-blue);
+  position: relative;
+  margin-top: 1em;
+}
+
+.about-section {
+  grid-area: about;
+  display: grid;
+  place-content: end center;
+}
+
+.about-section #about {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.about-section #about:visited {
+  color: var(--primary-blue);
+}
+
+.about-section #about:hover {
+  text-decoration: underline;
+}
