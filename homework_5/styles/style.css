@@ -1,5 +1,7 @@
+/* Importing font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 
+/* Variable declaration for colors */
 :root {
   --primary-blue: #115e98;
   --text-white: #ffffff;
@@ -11,6 +13,7 @@
   --light-gray: rgba(0, 0, 0, 0.12);
 }
 
+/* Setting global margin, padding and box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +21,7 @@
   font-family: Inter;
 }
 
+/* Setting global anchor tag styling */
 a,
 a:hover,
 a:visited {
@@ -25,11 +29,13 @@ a:visited {
   text-decoration: none;
 }
 
+/* Centering the page */
 body {
   display: grid;
   place-content: center;
 }
 
+/* Styling the main wrapper for the page */
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -40,6 +46,7 @@ body {
     auto 25em;
 }
 
+/* Styling the layout of the home page content */
 .home-content {
   grid-area: content;
   padding: 4.5em 0 4.5em 4.5em;
@@ -50,6 +57,7 @@ body {
     100%;
 }
 
+/* Styling the main discount banner */
 .banner {
   grid-area: banner;
   margin-bottom: 2em;
@@ -122,6 +130,7 @@ body {
   transform: translate(8px, 8px);
 }
 
+/* Styling the products section of the home page */
 .products {
   background-color: white;
   grid-area: products;
@@ -195,6 +204,7 @@ body {
   border-radius: 8px;
 }
 
+/* Styling the nav */
 nav {
   grid-area: nav;
   display: grid;
@@ -254,6 +264,7 @@ nav {
   place-content: end center;
 }
 
+/* Styling the links, hover and visited states */
 .link {
   font-family: Inter;
   font-weight: 500;
@@ -285,12 +296,15 @@ nav {
   font-weight: 500;
 }
 
+/* Stylingthe page title */
 #page-title {
   font-weight: 500;
   font-size: 2em;
   color: var(--text-black);
   padding-top: 2.5em;
 }
+
+/* Layout and styling of the internal pages */
 .product-listing-content,
 .product-details-content {
   position: relative;
@@ -301,6 +315,7 @@ nav {
   border-radius: 0px 16px 16px 16px;
 }
 
+/* Styling the product listing layout */
 .product-listing-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -360,6 +375,7 @@ nav {
   font-weight: 500;
 }
 
+/* Styling the product details page */
 .breadcrumbs {
   display: grid;
   grid-auto-flow: column;
@@ -388,6 +404,7 @@ nav {
   grid-column-gap: 4.5em;
 }
 
+/* Styling the product details */
 .details-data {
   grid-area: data;
   display: grid;
@@ -429,6 +446,7 @@ nav {
   margin-top: 2em;
 }
 
+/* Styling the color customization settings */
 .color-options {
   grid-area: options;
 }
@@ -496,6 +514,7 @@ label span {
   background-color: #887d7d;
 }
 
+/* Styling the size options */
 .size-options {
   width: fit-content;
   display: grid;
@@ -518,6 +537,7 @@ label span {
   margin-bottom: 0.5em;
 }
 
+/* Styling the quantity unit */
 .quantity-unit {
   display: grid;
   grid-auto-flow: column;
@@ -550,6 +570,7 @@ label span {
   border-radius: 0.5em;
 }
 
+/* Styling the add to cart unit */
 .add-to-cart {
   position: absolute;
   z-index: 1;
