@@ -12,13 +12,18 @@
     <div class="wrapper">
       <!-- The contents of the details page -->
       <div class="product-details-content">
-        <a href="./index.html" class="back-link"
+        <a href="../index.html" class="back-link" aria-label="Link back to Home"
           ><img src="./images/Back_Arrow.svg" alt="Back Arrow Icon" />
           <p>Back to Home</p>
         </a>
         <!-- Breadcrumb navigation to establish the layout of the information architecture. -->
         <div class="breadcrumbs">
-          <a href="./product-browsing.html" class="link">All Products</a>
+          <a
+            href="./product-browsing.html"
+            class="link"
+            aria-label="Link to All Products"
+            >All Products</a
+          >
           <p>/</p>
         </div>
         <h1 id="details-title">Couch Pillow</h1>
@@ -56,33 +61,49 @@
                     type="radio"
                     name="color-picker"
                     id="after-school-special"
+                    aria-label="After School Special"
                   />
                   <label for="after-school-special"
-                    ><div class="colorbox afterschool"></div>
+                    ><span class="colorbox afterschool"></span>
                     <span>After School Special</span></label
                   >
                 </div>
 
                 <div class="container">
-                  <input type="radio" name="color-picker" id="morning-haze" />
+                  <input
+                    type="radio"
+                    name="color-picker"
+                    id="morning-haze"
+                    aria-label="Morning Haze"
+                  />
                   <label for="morning-haze"
-                    ><div class="colorbox morninghaze"></div>
+                    ><span class="colorbox morninghaze"></span>
                     <span>Morning Haze</span></label
                   >
                 </div>
 
                 <div class="container">
-                  <input type="radio" name="color-picker" id="cozy-denim" />
+                  <input
+                    type="radio"
+                    name="color-picker"
+                    id="cozy-denim"
+                    aria-label="Cozy Denim"
+                  />
                   <label for="cozy-denim"
-                    ><div class="colorbox cozydenim"></div>
+                    ><span class="colorbox cozydenim"></span>
                     <span>Cozy Denim</span></label
                   >
                 </div>
 
                 <div class="container">
-                  <input type="radio" name="color-picker" id="rainy-day" />
+                  <input
+                    type="radio"
+                    name="color-picker"
+                    id="rainy-day"
+                    aria-label="Rainy Day"
+                  />
                   <label for="rainy-day"
-                    ><div class="colorbox rainyday"></div>
+                    ><span class="colorbox rainyday"></span>
                     <span>Rainy Day</span></label
                   >
                 </div>
@@ -92,26 +113,41 @@
               <h2>Size</h2>
               <div class="size-options">
                 <div class="container size-container">
-                  <input type="radio" name="size-picker" id="Small" />
+                  <input
+                    type="radio"
+                    name="size-picker"
+                    id="Small"
+                    aria-label="Small Size"
+                  />
                   <label class="size-label" for="Small">
-                    <h3>Small</h3>
-                    <p>24 cm long 24 cm wide 16 cm tall</p></label
+                    <span class="size-title">Small</span>
+                    <span>24 cm long 24 cm wide 16 cm tall</span></label
                   >
                 </div>
 
                 <div class="container size-container">
-                  <input type="radio" name="size-picker" id="Medium" />
+                  <input
+                    type="radio"
+                    name="size-picker"
+                    id="Medium"
+                    aria-label="Medium Size"
+                  />
                   <label class="size-label" for="Medium"
-                    ><h3>Medium</h3>
-                    <p>40 cm long 40 cm wide 24 cm tall</p></label
+                    ><span class="size-title">Medium </span>
+                    <span>40 cm long 40 cm wide 24 cm tall</span></label
                   >
                 </div>
 
                 <div class="container size-container">
-                  <input type="radio" name="size-picker" id="Large" />
+                  <input
+                    type="radio"
+                    name="size-picker"
+                    id="Large"
+                    aria-label="Large Size"
+                  />
                   <label class="size-label" for="Large"
-                    ><h3>Large</h3>
-                    <p>64 cm long 64 cm wide 32 cm tall</p></label
+                    ><span class="size-title">Large</span>
+                    <span>64 cm long 64 cm wide 32 cm tall</span></label
                   >
                 </div>
               </div>
@@ -119,9 +155,13 @@
             <div class="details-quantity">
               <h2>Quantity</h2>
               <div class="quantity-unit">
-                <button class="decrease">-</button>
+                <button class="decrease" aria-label="Decrease Quantity">
+                  -
+                </button>
                 <h1>1</h1>
-                <button class="increase">+</button>
+                <button class="increase" aria-label="Increase Quantity">
+                  +
+                </button>
               </div>
             </div>
           </div>
@@ -132,13 +172,18 @@
             Add 1 pillow to cart <br />
             $27.99
           </h2>
-          <img src="./images/white_arrow.svg" alt="White forward arrow icon" />
+          <button aria-label="Add to cart">
+            <img
+              src="./images/white_arrow.svg"
+              alt="White forward arrow icon"
+            />
+          </button>
         </div>
       </div>
       <!-- Global navigation -->
       <nav>
         <div class="header">
-          <a href="./index.html"
+          <a href="../index.html" aria-label="Link to Home"
             ><div id="logo">
               <img src="./images/Logo.svg" alt="Fluff Stuff" /></div
           ></a>
@@ -149,7 +194,9 @@
           <h2 id="cart-status">Cart Empty</h2>
         </div>
         <div class="about-section">
-          <a href="#" class="link">About Fluff Stuff</a>
+          <a href="#" class="link" aria-label="Link to About page"
+            >About Fluff Stuff</a
+          >
         </div>
       </nav>
     </div>
