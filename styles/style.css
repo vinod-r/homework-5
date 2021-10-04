@@ -180,6 +180,7 @@ body {
 }
 
 .product-card .label p {
+  color: var(--text-gray);
   font-size: 0.875em;
   place-self: center end;
 }
@@ -307,12 +308,26 @@ nav {
 /* Layout and styling of the internal pages */
 .product-listing-content,
 .product-details-content {
+  background-color: #fff;
+  height: 100%;
   position: relative;
   grid-area: content;
+  /* border: 1px solid blue; */
   padding: 4.5em 4.5em 4.5em 4.5em;
-  box-shadow: 20px 0px 30px rgba(17, 94, 152, 0.01),
+  /* box-shadow: 20px 0px 30px rgba(17, 94, 152, 0.01),
     15px 0px 20px rgba(17, 94, 152, 0.04), 10px 0px 10px rgba(17, 94, 152, 0.09);
-  border-radius: 0px 16px 16px 16px;
+  border-radius: 0px 16px 16px 16px; */
+}
+
+.shadow-element {
+  background-color: var(--primary-blue);
+  position: absolute;
+  right: 2%;
+  top: 10%;
+  width: 40px;
+  height: 80%;
+  filter: blur(20px);
+  z-index: -1;
 }
 
 /* Styling the product listing layout */
@@ -325,13 +340,14 @@ nav {
 }
 
 .product-listing-card {
+  background-color: #fff;
   padding: 2em;
   box-shadow: 0px 0px 30px rgba(17, 94, 152, 0.03),
     0px 0px 20px rgba(17, 94, 152, 0.06), 0px 0px 10px rgba(17, 94, 152, 0.12);
   border-radius: 1em;
   display: grid;
   grid:
-    "image info" auto
+    "image info" 2fr
     "buttons buttons" 1fr /
     auto 50%;
   grid-column-gap: 1em;
@@ -360,7 +376,8 @@ nav {
 }
 
 .product-listing-image {
-  max-width: 155px;
+  width: 155px;
+  height: 155px;
   grid-area: image;
   border-radius: 0.5em;
 }
